@@ -4,20 +4,20 @@ const Form = props => (
   <div>
     <input type="text" onChange={props.onTextChange} />
     <button
-      className="waves-effect waves-light btn todo-btn"
+      className="waves-effect waves-light btn todo-btn amber"
       onClick={e => {
         e.preventDefault();
         !props.text ? alert("Item can't be empty") : props.addTodo(props.text);
       }}
     >
-      <i class="material-icons left">add</i>
+      <i className="material-icons left">add</i>
       Add todo
     </button>
     <button
-      className="waves-effect waves-light btn todo-btn"
+      className="waves-effect waves-light btn todo-btn amber"
       onClick={props.removeTodos}
     >
-      <i class="material-icons left">clear</i>
+      <i className="material-icons left">clear</i>
       Clear todos
     </button>
   </div>

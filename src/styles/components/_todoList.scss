@@ -1,3 +1,22 @@
 .todo-list {
-    padding: 100px;
+    height: 300px;
+    width: 700px;
+    overflow-y: auto;
+    position: absolute;
+    margin-top: 300px;
+}
+
+.collection-item {
+    height: 55px;
+    font-size: 2.5em;
+}
+
+.collection-item-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collection-item, .collection-item-inner, .collection {
+    border: none;
 }

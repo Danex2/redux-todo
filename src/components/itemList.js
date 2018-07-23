@@ -7,22 +7,19 @@ const ItemList = props => (
         ? "Add a todo"
         : props.todoList.map((todo, index) => {
             return (
-              <li className="collection-item" key={index}>
-                <div>
+              <li className="collection-item indigo darken-2" key={index}>
+                <div className="collection-item-inner">
                   {todo.text}
-                  <a href="#!" class="secondary-content">
-                    <i class="material-icons">send</i>
-                  </a>
+                  <button
+                    className="btn-floating btn-small secondary-content amber"
+                    onClick={e => {
+                      e.preventDefault();
+                      props.removeTodo(todo.id);
+                    }}
+                  >
+                    <i className="material-icons">clear</i>
+                  </button>
                 </div>
-                <button
-                  className="btn-floating btn-small"
-                  onClick={e => {
-                    e.preventDefault();
-                    props.removeTodo(todo.id);
-                  }}
-                >
-                  <i className="material-icons">clear</i>
-                </button>
               </li>
             );
           })}
