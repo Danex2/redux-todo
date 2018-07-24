@@ -7,7 +7,9 @@ const Form = props => (
       className="waves-effect waves-light btn todo-btn amber"
       onClick={e => {
         e.preventDefault();
-        !props.text ? alert("Item can't be empty") : props.addTodo(props.text);
+        !props.text
+          ? alert("Can't add empty item to list!")
+          : props.addTodo(props.text);
       }}
     >
       <i className="material-icons left">add</i>

@@ -20,12 +20,13 @@ class todo extends React.Component {
     return (
       <div>
         <Header />
-        <div className="content-wrapper">
+        <div className="content-wrapper container">
           <Form
             text={this.state.text}
             onTextChange={this.handleText}
             addTodo={onAddTodo}
             removeTodos={onClearTodo}
+            todoList={todos}
           />
           <ItemList todoList={todos} removeTodo={removeSingleTodo} />
         </div>

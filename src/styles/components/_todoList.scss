@@ -1,6 +1,6 @@
 .todo-list {
     height: 300px;
-    width: 700px;
+    width: 650px;
     overflow-y: auto;
     position: absolute;
     margin-top: 300px;
@@ -19,4 +19,21 @@
 
 .collection-item, .collection-item-inner, .collection {
     border: none;
+    text-decoration: none;
+}
+
+.collection {
+    text-align: center;
+}
+
+@media only screen and (max-width: 381px) {
+    .todo-list {
+        width: 450px;
+        margin-left: 20px;
+    }
+
+    .collection-item-inner {
+        justify-content: space-between;
+    }
+
 }
